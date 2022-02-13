@@ -9,6 +9,7 @@ import { FormComponent } from './form/form.component';
 import { UserComponent } from './user/user.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RepoComponent } from './repo/repo.component';
+import { User } from './user.service/user.service.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RepoComponent } from './repo/repo.component';
     FormComponent,
     UserComponent,
     NotfoundComponent,
-    RepoComponent
+    RepoComponent,
+    User.ServiceComponent
   ],
   imports: [
     BrowserModule,

@@ -1,24 +1,25 @@
 import { Injectable } from '@angular/core';
+import { User } from './user';
+import { Repo } from './repo';
+import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class SearchRequestService {
-
+export class UserService {
 
   getUser: User;
   getRepo: Repo;
 
-
   constructor(private http: HttpClient) {
-    this.getUser = new User();
-    this.getRepo = new Repo();
+    this.getUser = new User('', '', '', '', 0, 0, 0, '', new Date());
+    this.getRepo =  new Repo('', '', '', new Date(),'');
+
   }
 
   searchUser(searchName: string) {
+
     interface Response {
       url: string;
       login: string;
@@ -32,26 +33,22 @@ export class SearchRequestService {
     }
 
 
-    // get username
-
+    // get the username
     return new Promise((resolve, reject) => {
       this.http.get<Response>('https://api.github.com/users/' + searchName + '?access_token=' + environment.apiKey).toPromise()
-        .then((result) => {
-          this.getUser = result;
-          resolve();
-        },
-
-          (error) => {
-            console.log(error);
-            reject();
-
-          });
-
+      .then((result) => {
+        this.getUser = result;
+        resolve();
+      }, (error) => {
+      console.log(error);
+      reject();
+      });
     });
   }
 
   getRepos(searchName) {
-    interface Repos {
+
+    interface Repos{
       name: string;
       html_url: string;
       description: string;
@@ -59,17 +56,15 @@ export class SearchRequestService {
       atcherCounted: number;
       language: string;
       created_at: Date;
-
     }
-
     return new Promise((resolve, reject) => {
-      this.http.get<repos>('https://api.github.com/users/' + searchName + '/repos?order=created&sort=asc?access_token=' + environment.apiKey)
+      this.http.get<Repos>('https://api.github.com/users/' + searchName + '/repos?order=created&sort=asc?access_token=' + environment.apiKey)
       .toPromise().then(
-        (results)=>{
-          this.getRepo=results;
+        (results) => {
+          this.getRepo = results;
           resolve();
         },
-        (error)=>{
+        (error) => {
           console.log(error);
           reject();
         }
@@ -77,6 +72,3 @@ export class SearchRequestService {
     });
   }
 }
-
-
-

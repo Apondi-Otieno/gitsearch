@@ -1,6 +1,6 @@
 import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
-import { Repo } from '../repo';
+import { Repo } from './repo.component';
 
 @Component({
   selector: 'app-repo',
