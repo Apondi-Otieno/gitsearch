@@ -1,0 +1,102 @@
+.profile {
+    margin-top: 250px;
+}
+
+/* .card {
+    width: 600px;
+} */
+
+.circular--landscape {
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 120%;
+}
+
+.circular--landscape img {
+    width: auto;
+    height: 100%;
+    /* margin-left: -12px; */
+}
+.label{
+    margin-left: 10px;
+    /* border: 3px solid black; */
+    border-radius: 3px;
+}
+#default{
+    background-color: rgb(56, 53, 53);
+    color: white;
+}
+#primary{
+    background-color: rgb(107, 107, 230);
+    color: white;
+}
+#success{
+    background-color: rgb(63, 228, 63);
+    color: white;
+}
+p a{
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: rgb(179, 218, 101);
+    color: white;
+    margin-left: 10px;
+    
+}
+
+
+.scroll-to-top {
+    opacity: 0;
+    transition: all .2s ease-in-out;
+   }
+   .show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+   }
+  html,
+  body,
+  header,
+  .carousel {
+    height: 50%;
+  }
+  
+  @media (min-width: 800px) and (max-width: 850px) {
+          .navbar:not(.top-nav-collapse) {
+              background: #1C2331!important;
+          }
+      }
+  
+  .carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,.view,body,html{height:90%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
+  
+  
+  
+.video-intro{
+    height: auto;
+    width: 100%;
+    margin-left: -20px;
+    margin-right: -20px;
+}  
+.mask {
+    margin-top: 100px;
+}
+
+.nav-flex-icons{
+    margin-left: 700px;
+}
+
+footer{
+    margin-bottom: 50px;
+}
+
+.pb-4 a{
+    margin-left: 30px;
+}
+
+.panel-body ul li a{
+    text-decoration: none;
+}
+.panel-body ul li{
+    font-weight: bold;
+}

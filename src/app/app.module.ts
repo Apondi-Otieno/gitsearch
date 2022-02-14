@@ -7,6 +7,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { ProfileServiceComponent } from './profile-service/profile-service.component';
 import { ProfileClassComponent } from './profile-class/profile-class.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ProfileComponent } from './profile/profile.component';
     ProfileServiceComponent,
     ProfileClassComponent,
     ProfileComponent,
+    RepositoriesComponent,
 
   ],
   imports: [
