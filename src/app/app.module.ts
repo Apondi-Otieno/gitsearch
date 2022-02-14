@@ -6,6 +6,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { ProfileServiceComponent } from './profile-service/profile-service.component';
 import { ProfileClassComponent } from './profile-class/profile-class.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ProfileClassComponent } from './profile-class/profile-class.component';
     SearchFormComponent,
     ProfileServiceComponent,
     ProfileClassComponent,
+    ProfileComponent,
 
   ],
   imports: [
