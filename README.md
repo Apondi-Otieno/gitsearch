@@ -16,3 +16,6 @@ Reach me at apondioti@gmail.com
 
 ## License
 
+MIT License
+
+Copyright (c) 2022 Apondi Otieno
