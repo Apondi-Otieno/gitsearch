@@ -1,10 +1,10 @@
 
 import { environment } from 'src/environments/environment';
-import { ProfileService } from './../profile-service/profile.service';
+import { ProfileService } from './../profile-service/profile-service.component';
 import { Component, OnInit } from '@angular/core';
-import { Profile } from '../profile-class/profile';
-import { Repostories } from '../repostories';
+import { Profile } from '../profile-class/profile-class.component';
 import { HttpClient } from '@angular/common/http';
+import { Repostories } from '../repositories';
 
 
 
@@ -45,7 +45,7 @@ export class ProfileComponent implements OnInit {
   }
 
     getRepoInfo(){
-      this.http.get<any>(environment.apiUrl +this.username + this.profileName).subscribe(
+      this.http.get<any>(environment.apiKey +this.username + this.profileName).subscribe(
         response =>{
            console.log(response);
           this.repos = response;

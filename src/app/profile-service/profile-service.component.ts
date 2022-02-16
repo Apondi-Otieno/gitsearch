@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Profile } from '../profile-class/profile';
+import { Profile } from '../profile-class/profile-class.component';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
@@ -38,7 +38,7 @@ export class ProfileService {
     }
 
     let promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>(environment.apiUrl + this.username + "?client_id =" + this.clientID + "&clientsecret =" + this.clientSecret).toPromise().then(response => {
+      this.http.get<ApiResponse>(environment.apiKey + this.username + "?client_id =" + this.clientID + "&clientsecret =" + this.clientSecret).toPromise().then(response => {
         this.profile.name = response!.name;
         this.profile.avatar_url = response!.avatar_url;
         this.profile.company = response!.company;

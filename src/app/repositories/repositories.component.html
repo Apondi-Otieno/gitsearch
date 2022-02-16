@@ -1,1 +1,12 @@
-<p>repositories works!</p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <h5>Repositories</h5>
+        </div>
+        <div class="panel-body" *ngFor = "let repo of repos">
+            <ul>
+                <li>{{ repo.name }}  <a href="{{ repo.repos_url }}" target="_blank"> View repository in Github</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

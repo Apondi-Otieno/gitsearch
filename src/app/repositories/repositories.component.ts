@@ -1,4 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
+import { Repostories } from '../repositories';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-repositories',
@@ -6,10 +9,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repositories.component.css']
 })
 export class RepositoriesComponent implements OnInit {
+  
 
-  constructor() { }
+  repos!:Repostories []; 
 
-  ngOnInit(): void {
+  constructor( private http:HttpClient) {
+
+  }
+
+  ngOnInit() {
+    this.getRepoInfo();
+  
+  }
+
+  getRepoInfo(){
+    this.http.get<any>("https://api.github.com/users/Sieva-cmd/repos").subscribe(
+      response =>{
+         console.log(response);
+        this.repos = response;
+      }
+    );
   }
 
 }
