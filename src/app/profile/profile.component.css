@@ -23,22 +23,22 @@
     border-radius: 3px;
 }
 #default{
-    background-color: rgb(56, 53, 53);
+    background-color: rgb(228, 124, 124);
     color: white;
 }
 #primary{
-    background-color: rgb(107, 107, 230);
+    background-color: rgb(6, 6, 15);
     color: white;
 }
 #success{
-    background-color: rgb(63, 228, 63);
-    color: white;
+    background-color: rgb(188, 199, 188);
+    color: yellowgreen;
 }
 p a{
     text-decoration: none;
     border-radius: 3px;
-    background-color: rgb(179, 218, 101);
-    color: white;
+    background-color: rgb(234, 241, 220);
+    color: black;
     margin-left: 10px;
     
 }
@@ -61,7 +61,7 @@ p a{
   
   @media (min-width: 800px) and (max-width: 850px) {
           .navbar:not(.top-nav-collapse) {
-              background: #1C2331!important;
+              background: #050911!important;
           }
       }
   
@@ -84,7 +84,9 @@ p a{
 }
 
 footer{
-    margin-bottom: 50px;
+    
+    padding: 2rem;
+    color:white;
 }
 
 .pb-4 a{
@@ -97,3 +99,4 @@ footer{
 .panel-body ul li{
     font-weight: bold;
 }
+
