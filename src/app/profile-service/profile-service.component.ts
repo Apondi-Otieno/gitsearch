@@ -7,6 +7,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ProfileService {
+  updateProfile(username: string) {
+    throw new Error('Method not implemented.');
+  }
 
   private username!: string;
   private clientID = '79b5763e808d746f79ff';
@@ -26,6 +29,7 @@ export class ProfileService {
 
   getProfileInfo() {
     interface ApiResponse {
+      api_url: any;
       name: string;
       avatar_url: string;
       company: string;
@@ -38,7 +42,7 @@ export class ProfileService {
     }
 
     let promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>(environment.apiKey + this.username + "?client_id =" + this.clientID + "&clientsecret =" + this.clientSecret).toPromise().then(response => {
+      this.http.get<ApiResponse>(environment + this.username + "?client_id =" + this.clientID + "&clientsecret =" + this.clientSecret).toPromise().then(response => {
         this.profile.name = response!.name;
         this.profile.avatar_url = response!.avatar_url;
         this.profile.company = response!.company;
@@ -46,6 +50,7 @@ export class ProfileService {
         this.profile.followers = response!.followers;
         this.profile.following = response!.following;
         this.profile.html_url = response!.html_url;
+        this.profile.apiUrl = response!.api_url;
         this.profile.public_repos = response!.public_repos;
         this.profile.login = response!.login
 
@@ -61,8 +66,4 @@ export class ProfileService {
     return promise
 
 
-  }
-updateProfile(username: string) {
-    this.username = username;
-  }
-}
+  }}

@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { Repostories } from '../repositories';
+import { Repositories } from '../repositories';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class RepositoriesComponent implements OnInit {
   
 
-  repos!:Repostories []; 
+  repos!:Repositories []; 
 
   constructor( private http:HttpClient) {
 

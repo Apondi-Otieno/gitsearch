@@ -1,4 +1,5 @@
-import { Repositories } from './repositories';
+import{Repositories} from '../app/repositories'
+
 
 describe('Repositories', () => {
   it('should create an instance', () => {
